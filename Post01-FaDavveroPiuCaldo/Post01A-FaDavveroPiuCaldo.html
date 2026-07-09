@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- inizio della pagina web-->
+
+<html>
+
+<!-- head: contiene tutto ciò che non si vede del sito-->
+<head>
+	<!-- rende il sito responsive: adattabile a vari tipi di device-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- importa il file di stile css con le caratteristiche grafiche del sito-->
+	<link rel="stylesheet" type="text/css" href="..\stile.css">
+
+	<!-- definisce il nome della cartella del bowser-->
+	<title> 
+	Fa davvero più caldo
+	</title> 
+</head>
+
+	
+<!-- body: qui va messo tutto ciò che si vede nella pagina-->	
+<body>  
+
+<!-- header: è la porzione di pagina che contiene il titolo (logo, titolo, sottotitolo, etc.)-->
+<header>
+	<table align="center">
+		<tr>
+			<td class="td"><img src="..\Logo.jpg" width="185" ></td>
+			<td class="td"> <h1 class="titolo" >Occhiali matematici</h1>
+				<p class="motto"> <I><small>Il miracolo dell'adeguatezza del linguaggio della matematica alla formulazione delle leggi della fisica è un dono meraviglioso che non comprendiamo né meritiamo.</I>
+— Eugene Wigner, <i>L'irragionevole efficacia della matematica </small></i></p>
+			</td>
+		</tr>
+	</table>
+</header>
+
+<!-- nav: è la porzione di pagina che contiene la barra di navigazione-->	
+<nav>
+	<!-- hr: crea una riga orizzontale -->
+	<a href="..\index.html" > Home </a>  &emsp;&emsp;&emsp;
+	<a href="..\TuttiIPost.html"> Tutti i post </a>  &emsp;&emsp;&emsp;
+	<a href="..\Strumenti.html"> Strumenti </a>  &emsp;&emsp;&emsp;
+	<a href="..\Contatti.html"> Contatti </a>  &emsp;&emsp;&emsp;
+	
+</nav>
+<!-- ------------------------------------------------------------------------------------------------------>
+
+<html>
+
+
+
+<section> 
+	
+<!-- article: sono i paragrafi del capitolo-->	
+<article>
+	<img src="ImmaginePost01.jpg" width="60%">
+	<h1 class="titolo" >Fa davvero più caldo?</h1>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .messaggio {
+        width: fit-content;
+        max-width: 60%;
+        padding: 10px 15px;
+        margin: 15px 0;
+        border-radius: 15px;
+    }
+
+    .frase1 {
+        background-color: lightblue;
+        font-size: 20px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .frase2 {
+        background-color: lightgreen;
+        font-size: 24px;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .frase3 {
+        background-color: lightcoral;
+        font-size: 20px;
+        text-align: left;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="messaggio frase1">
+    Il cambiamento climatico non esiste!
+</div>
+
+<div class="messaggio frase2">
+    Il cambiamento climatico esiste ma c’è sempre stato perché è un fenomeno naturale, non dipende dall’attività umana.
+</div>
+
+<div class="messaggio frase3">
+    Il cambiamento climatico è dovuto all’attività umana ed è pericoloso, dobbiamo agire per limitarlo e limitarne gli effetti.
+</div>
+
+
+
+
+
+
+
+
+
+
+</p>
+Per risolvere la questione cominciamo a rivolgerci non a un’altra opinione ma alle osservazioni disponibili.
+</p>
+Copernicus è il programma dell’Unione Europea dedicato all’osservazione del pianeta Terra. Attraverso la flotta di satelliti <i>Sentinel</i> 
+e una rete di stazioni terrestri monitora in modo continuativo terra, mare e atmosfera del nostro pianeta. I dati raccolti sono disponibili gratuitamente 
+a chiunque sul sito del programma. 
+L’immagine all’inizio dell’articolo è una rappresentazione della rapidità di riscaldamento delle diverse zone del pianeta (in °C ogni 10 anni) 
+(<td class="td"> <a href="https://climate.copernicus.eu/ten-charts-discover-european-state-climate-2025-report" download class="col-link"> ten charts discover european state climate 2025 </a> </td>).
+
+<br />In questo post vogliamo analizzare il riscaldamento globale della Terra utilizzando i dati del catalogo ERA5. Si tratta di un catalogo costruito dall’ente ECMWF (<i>European Centre for Medium-Range Weather Forecasts</i>, cioè <i>Centro Europeo per le Previsioni Metereologiche a Medio Termine</i>) che fornisce dati metereologici in ogni punto della Terra a intervalli di un’ora dal 1940 ad oggi. Questi valori sono ottenuti con una re-analisi dei dati raccolti in stazioni sparse in tutto il mondo, elaborati con gli stessi strumenti utilizzati per le previsioni metereologiche, con il vantaggio ulteriore di avere a disposizione anche l’evoluzione successiva all’istante di interesse in modo da vincolare i valori in modo più affidabile.
+<br />I dati del catalogo si trovano al link seguente:
+<p>
+<td class="td"> <a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land-timeseries" download class="col-link"> Copernicus Climate Change Service, Climate Data Store, (2025): ERA5 Land hourly time-series data on single levels from 1940 to present.</a> </td>
+<br>(Accessed on 23-05-2026)
+</p>
+
+
+<br />
+Qui mettiamo a disposizione alcuni file di dati, in formato csv, parzialmente rielaborati e raggruppati, che vi permettono di passare subito alla fase di analisi. In particolare trovate, per quattro punti della Terra (sull’equatore in una pianura del Congo, al centro della pianura Padana, nelle isole Svalbard nel Circolo polare Artico, nell’Oceano Pacifico del Sud) i dati della temperatura all’altezza di due metri rispetto al suolo per i seguenti periodi:
+<ul> <!unordered list>
+  <li>	Ora per ora per tre giorni consecutivi in ogni stagione nel 1940, 1980 e 2020 </li>
+<li>	Giorno per giorno per due anni consecutivi nel 1940-41, 1982-83 e 2024-25 </li>
+<li>	Anno per anno dal 1940 al 2025. </li>
+</ul>
+<p>
+Nella tabella seguente in ogni casella si trova un file scaricabile.
+</p>
+
+
+	<table class="table_b" align="center">
+		<tr>
+			<td class="td_b"> <b >Congo (Equatore)</b> </td>
+			<td class="td_b"> <b >Pianura Padana</b> </td>
+			<td class="td_b"> <b >Isole Svalbard</b> </td>
+			<td class="td_b"> <b>Oceano Pacifico Sud</b> </td>
+		</tr>
+		
+		<tr>
+			<td class="td"> Lat 0° N; Long 20.5° E </td>
+			<td class="td"> Lat 45° N; Long 11° E </td>
+			<td class="td"> Lat 79.5° N; Long 16.75° E </td>
+			<td class="td"> Lat 28.5 S; Long 141.5 W </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-01-1940.csv" download class="col-link"> 01-03/01/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-01-1940.csv" download class="col-link"> 01-03/01/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-01-1940.csv" download class="col-link"> 01-03/01/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-01-1940.csv" download class="col-link"> 01-03/01/1940 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-04-1940.csv" download class="col-link"> 01-03/04/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-04-1940.csv" download class="col-link"> 01-03/04/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-04-1940.csv" download class="col-link"> 01-03/04/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-04-1940.csv" download class="col-link"> 01-03/04/1940 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-07-1940.csv" download class="col-link"> 01-03/07/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-07-1940.csv" download class="col-link"> 01-03/07/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-07-1940.csv" download class="col-link"> 01-03/07/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-07-1940.csv" download class="col-link"> 01-03/07/1940 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1940 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1940 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-01-1980.csv" download class="col-link"> 01-03/01/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-01-1980.csv" download class="col-link"> 01-03/01/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-01-1980.csv" download class="col-link"> 01-03/01/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-01-1980.csv" download class="col-link"> 01-03/01/1980 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-04-1980.csv" download class="col-link"> 01-03/04/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-04-1980.csv" download class="col-link"> 01-03/04/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-04-1980.csv" download class="col-link"> 01-03/04/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-04-1980.csv" download class="col-link"> 01-03/04/1980 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-07-1980.csv" download class="col-link"> 01-03/07/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-07-1980.csv" download class="col-link"> 01-03/07/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-07-1980.csv" download class="col-link"> 01-03/07/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-07-1980.csv" download class="col-link"> 01-03/07/1980 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1980 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-10-1940.csv" download class="col-link"> 01-03/10/1980 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-01-2020.csv" download class="col-link"> 01-03/01/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-01-2020.csv" download class="col-link"> 01-03/01/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-01-2020.csv" download class="col-link"> 01-03/01/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-01-2020.csv" download class="col-link"> 01-03/01/2020 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-04-2020.csv" download class="col-link"> 01-03/04/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-04-2020.csv" download class="col-link"> 01-03/04/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-04-2020.csv" download class="col-link"> 01-03/04/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-04-2020.csv" download class="col-link"> 01-03/04/2020 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-07-2020.csv" download class="col-link"> 01-03/07/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-07-2020.csv" download class="col-link"> 01-03/07/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-07-2020.csv" download class="col-link"> 01-03/07/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-07-2020.csv" download class="col-link"> 01-03/07/2020 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\treGiorni\CongoEquatore3ggda01a03-10-2020.csv" download class="col-link"> 01-03/10/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\PianuraPadana3ggda01a03-10-2020.csv" download class="col-link"> 01-03/10/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\Svalbard3ggda01a03-10-2020.csv" download class="col-link"> 01-03/10/2020 (h)</a> </td>
+			<td class="td"> <a href="Data01\treGiorni\OceanoPacificoSud3ggda01a03-10-2020.csv" download class="col-link"> 01-03/10/2020 (h)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\dueAnni\CongoEquatore2yr1940-41.csv" download class="col-link"> 1940-41 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\PianuraPadana2yr1940-41.csv" download class="col-link"> 1940-41 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\Svalbard2yr1940-41.csv" download class="col-link"> 1940-41 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\OceanoPacificoSud2yr1940-41.csv" download class="col-link"> 1940-41 (d)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\dueAnni\CongoEquatore2yr1982-83.csv" download class="col-link"> 1982-83 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\PianuraPadana2yr1982-83.csv" download class="col-link"> 1982-83 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\Svalbard2yr1982-83.csv" download class="col-link"> 1982-83 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\OceanoPacificoSud2yr1982-83.csv" download class="col-link"> 1982-83 (d)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\dueAnni\CongoEquatore2yr2024-25.csv" download class="col-link"> 2024-25 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\PianuraPadana2yr2024-25.csv" download class="col-link"> 2024-25 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\Svalbard2yr2024-25.csv" download class="col-link"> 2024-25 (d)</a> </td>
+			<td class="td"> <a href="Data01\dueAnni\OceanoPacificoSud2yr2024-25.csv" download class="col-link"> 2024-25 (d)</a> </td>
+		</tr>
+		<tr>			
+			<td class="td"> <a href="Data01\Completo1940-2025\CongoEquatore1940-2025.csv" download class="col-link"> 1940-2025 (y)</a> </td>
+			<td class="td"> <a href="Data01\Completo1940-2025\PianuraPadana1940-2025.csv" download class="col-link"> 1940-2025 (y)</a> </td>
+			<td class="td"> <a href="Data01\Completo1940-2025\Svalbard1940-2025.csv" download class="col-link"> 1940-2025 (y)</a> </td>
+			<td class="td"> <a href="Data01\Completo1940-2025\OceanoPacificoSud1940-2025.csv" download class="col-link"> 1940-2025 (y)</a> </td>
+		</tr>
+
+	</table>
+	
+<p><h2>Guida all’analisi</h2></p>
+
+<p>Comincia a rappresentare graficamente i dati relativi ai periodi di tre giorni.</p>
+<ul>
+	<li>Qual è la forma più comune di questi grafici? Come si può interpretare?</li>
+	<li>Sono osservabili differenze relative alla stagione, alla latitudine o al tipo di luogo considerato?</li>
+</ul>
+<p>Rappresenta ora graficamente i dati relativi a periodi di due anni. Anche in questo caso chiediti</p>
+<ul>
+	<li>Qual è la forma più comune di questi grafici? Come si può interpretare?</li>
+	<li>Sono osservabili differenze relative alla latitudine o al tipo di luogo considerato?</li>
+</ul>
+<p>Rappresenta infine i dati relativi all’intero periodo.</p>
+<ul>
+	<li>Che tipo di andamento si osserva? </li>
+	<li>È possibile fare previsioni? Che accuratezza potresti attribuire a queste previsioni?</li>
+	<li>Prova a stimare l’andamento delle temperature nell’arco di qualche decennio.</li>
+</ul>
+
+<table align="center">
+		<tr>
+			<td class="td"><img src="..\Logo.jpg" width="100" ></td>
+			<td class="td"> <a href="Post01B-FaDavveroPiuCaldo.html" > <h3 class="sottotitolo">Fa davvero più caldo? <br /> La nostra analisi</h3> </a>
+			</td>
+		</tr>
+</table>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- inizio della pagina web-->
+
+<html>
+
+<!-- head: contiene tutto ciò che non si vede del sito-->
+<head>
+	<!-- rende il sito responsive: adattabile a vari tipi di device-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- importa il file di stile css con le caratteristiche grafiche del sito-->
+	<link rel="stylesheet" type="text/css" href="..\stile.css">
+
+	<!-- definisce il nome della cartella del bowser-->
+	<title> 
+	Omicidi
+	</title> 
+</head>
+
+	
+<!-- body: qui va messo tutto ciò che si vede nella pagina-->	
+<body>  
+
+<!-- header: è la porzione di pagina che contiene il titolo (logo, titolo, sottotitolo, etc.)-->
+<header>
+	<table align="center">
+		<tr>
+			<td class="td"><img src="..\Logo.jpg" width="185" ></td>
+			<td class="td"> <h1 class="titolo" >Occhiali matematici</h1>
+				<p class="motto"> <I><small>Il miracolo dell'adeguatezza del linguaggio della matematica alla formulazione delle leggi della fisica è un dono meraviglioso che non comprendiamo né meritiamo.</I>
+— Eugene Wigner, <i>L'irragionevole efficacia della matematica </small></i></p>
+			</td>
+		</tr>
+	</table>
+</header>
+
+<!-- nav: è la porzione di pagina che contiene la barra di navigazione-->	
+<nav>
+	<!-- hr: crea una riga orizzontale -->
+	<a href="..\index.html" > Home </a>  &emsp;&emsp;&emsp;
+	<a href="..\TuttiIPost.html"> Tutti i post </a>  &emsp;&emsp;&emsp;
+	<a href="..\Strumenti.html"> Strumenti </a>  &emsp;&emsp;&emsp;
+	<a href="..\Contatti.html"> Contatti </a>  &emsp;&emsp;&emsp;
+	
+</nav>
+<!-- ------------------------------------------------------------------------------------------------------>
+
+<html>
+
+
+
+<section> 
+	
+<!-- article: sono i paragrafi del capitolo-->	
+<article>
+	<img src="Immagine02.png" width="60%">
+	<h1 class="titolo" >Siamo al sicuro? </h1>
+<p>
+È sicuro il posto dove viviamo? 
+</p>
+Ma ci sono posti più sicuri e posti meno sicuri o la violenza può manifestarsi un anno in un posto e un anno in un altro, in modo casuale?
+</p>
+Se gli eventi violenti non sono casuali, da cosa possono dipendere? Esistono cause riconoscibili della violenza sociale?
+</p>
+
+Proviamo a rispondere a queste domande, almeno parzialmente, analizzando il tasso di omicidi in diversi Paesi del mondo.
+Il tasso di omicidi misura il numero di omicidi in un Paese ogni anno per ogni centomila abitanti.
+Potete scaricare il file
+<p>
+	<table align="center">
+		<tr>
+			<td class="td"> <a href="Data02\HomicideRate.csv" download class="col-link"> Homicide Rate in the World</a> </td>
+		</tr>
+	</table>
+</p>
+
+che riporta il tasso di omicidi in diversi paesi e in diversi anni. I dati 
+sono stati ricavati dal sito 
+<td class="td"> <a href="https://ourworldindata.org/grapher/homicide-rate-unodc?tab=line&time=1990..2024" download class="col-link"> Our World in Data </a> </td> (ultimo accesso 30/6/2026)
+che a sua volta si è basato su dati delle Nazioni Unite.
+<ul>
+	<li>	Utilizzate i dati contenuti nel file per valutare quanto sono grandi le differenze tra un paese e l’altro e se il tasso di omicidi in un singolo paese è relativamente stabile o molto variabile nel tempo.
+</li>
+</ul>
+Cerchiamo poi di valutare se ci possono essere altre grandezze correlate al tasso di omicidi: possono essere cause, o meglio concause, effetti o anche effetti di una stessa causa.
+Prima di procedere provate a pensare autonomamente quali grandezze potrebbero essere correlate al tasso di omicidi.
+
+<br/>
+Visto che molti omicidi avvengono per mezzo di armi da fuoco, proviamo a studiare se c’è una correlazione tra il numero di armi disponibili in un paese e il tasso di omicidi. Per molti paesi non ci sono molti dati disponibili su questo dato; l’unica fonte sufficientemente ampia che permetta di confrontare paesi anche molto diversi tra loro 
+è il sito  <td class="td"> <a href="https://www.smallarmssurvey.org/" download class="col-link"> Small Arms Survey,</a> </td>
+su cui si trovano però i dati aggiornati solo al 2017.
+Abbiamo accorpato nel file 
+
+<p>
+	<table align="center">
+		<tr>
+			<td class="td"> <a href="Data02\HomicideRateVsArms2017.csv" download class="col-link"> HomicideRateVsArms2017</a> </td>
+		</tr>
+	</table>
+</p>
+
+i dati sulle armi (numero di armi per ogni 100 abitanti) e il tasso di omicidi dello stesso anno.
+<ul>
+	<li>Analizza i dati per valutare se esiste una correlazione significativa tra i due caratteri considerati.
+</li>
+</ul>
+Possiamo infine analizzare la relazione tra il tasso di omicidi e alcuni indicatori economici e sociali. In particolare ci concentriamo su
+<ul>
+	<li>Il Prodotto Interno Lordo per abitante, cioè la ricchezza prodotta annualmente in un paese per ogni abitante. 
+	I dati sono tratti dal sito della 
+	<td class="td"> <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" download class="col-link"> Banca Mondiale </a> </td>
+	</li>
+	<li>La disuguaglianza della distribuzione della ricchezza, che vi proponiamo utilizzando due parametri diversi: 
+	l’indice di Gini e la percentuale di ricchezza guadagnata dal 10% più ricco della popolazione. 
+	I dati sono tratti da Our World In Data, rielaborati a partire dalla piattaforma PIP (<td class="td"> <a href="https://pip.worldbank.org" download class="col-link">Poverty and Inequality Platform</a> </td>): 
+	(World Bank (2025) Poverty and Inequality Platform
+	World Bank Group, www.pip.worldbank.org. 
+	Accessed June 25, 2026.– processed by Our World in Data)
+	</li> 
+</ul>
+Per questi parametri sono disponibili dati più recenti rispetto alla diffusione delle armi; per avere un sufficiente numero di paesi ci limitiamo agli anni dal 2019 a 2022. Nei file seguenti abbiamo già predisposto, per ogni paese, il tasso di omicidi, l’indice di Gini, la percentuale di ricchezza guadagnato dal 10% più ricco e il PIL pro capite (nei file è indicato come GDP, Gross Domestic Product)
+<p>
+<header>
+	<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+	<table align="center">
+		<tr>
+			<td class="td"> <a href="Data02\HomicideRateVsEcon2019.csv" download class="col-link"> HomicideRateVsEcon2019</a> </td>
+			<td class="td"> <a href="Data02\HomicideRateVsEcon2020.csv" download class="col-link"> HomicideRateVsEcon2020</a> </td>
+			<td class="td"> <a href="Data02\HomicideRateVsEcon2021.csv" download class="col-link"> HomicideRateVsEcon2021</a> </td>
+			<td class="td"> <a href="Data02\HomicideRateVsEcon2022.csv" download class="col-link"> HomicideRateVsEcon2022</a> </td>
+		</tr>
+
+	</table>
+</header>
+</p>
+<ul>
+	<li>Prova ad analizzare le correlazioni tra il tasso di omicidi e questi parametri economici. Per studiare gli effetti della disuguaglianza economica non è necessario usare sia l’indice di Gini che la percentuale del 10% più ricco perché i due parametri sono fortemente correlati (puoi verificare anche questo, quindi puoi scegliuere uno di questi due.
+</li>
+	<li>Prova infine a immaginare altri parametri che potrebbero essere collegati al tasso di omicidi e prova a reperire i dati per verificare la tua ipotesi.
+</li> 
+</ul>
+
+
+<table align="center">
+		<tr>
+			<td class="td"><img src="..\Logo.jpg" width="100" ></td>
+			<td class="td"> <a href="Post02B-Omicidi.html" > <h3 class="sottotitolo">Siamo al sicuro? <br /> La nostra analisi</h3> </a>
+			</td>
+		</tr>
+</table>

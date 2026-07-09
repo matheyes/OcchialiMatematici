@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!-- inizio della pagina web-->
+
+<html>
+
+<!-- head: contiene tutto ciò che non si vede del sito-->
+<head>
+	<!-- rende il sito responsive: adattabile a vari tipi di device-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- importa il file di stile css con le caratteristiche grafiche del sito-->
+	<link rel="stylesheet" type="text/css" href="..\..\stile.css">
+
+	<!-- definisce il nome della cartella del bowser-->
+	<title> 
+	Grafici semilogaritmici
+	</title> 
+	
+	<!-- per usare latex-->
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+	
+<!-- body: qui va messo tutto ciò che si vede nella pagina-->	
+<body>  
+
+<!-- header: è la porzione di pagina che contiene il titolo (logo, titolo, sottotitolo, etc.)-->
+<header>
+	<table align="center">
+		<tr>
+			<td class="td"><img src="..\..\Logo.jpg" width="185" ></td>
+			<td class="td"> <h1 class="titolo" >Occhiali matematici</h1>
+				<p class="motto"> <I><small>Il miracolo dell'adeguatezza del linguaggio della matematica alla formulazione delle leggi della fisica è un dono meraviglioso che non comprendiamo né meritiamo.</I>
+— Eugene Wigner, <i>L'irragionevole efficacia della matematica </small></i></p>
+			</td>
+		</tr>
+	</table>
+</header>
+
+<!-- nav: è la porzione di pagina che contiene la barra di navigazione-->	
+<nav>
+	<!-- hr: crea una riga orizzontale -->
+	<a href="..\..\index.html" > Home </a>  &emsp;&emsp;&emsp;
+	<a href="..\..\TuttiIPost.html"> Tutti i post </a>  &emsp;&emsp;&emsp;
+	<a href="..\..\Strumenti.html"> Strumenti </a>  &emsp;&emsp;&emsp;
+	<a href="..\..\Contatti.html"> Contatti </a>  &emsp;&emsp;&emsp;
+	
+</nav>
+<!-- ------------------------------------------------------------------------------------------------------>
+
+<html>
+
+
+
+<section> 
+	
+<!-- article: sono i paragrafi del capitolo-->	
+<article>
+
+	<h1 class="titolo" >Grafici in scala semilogaritmica </h1>
+<p>
+La tabella sotto riporta una stima della popolazione umana nella storia a partire dal 10000 a.C. 
+fino ad oggi (fonte <a href="https://ourworldindata.org" download class="col-link"> Our World in Data </a> ).
+</p>
+<table align="left">
+		<tr>
+			<td class="td"> </td> 
+			<td class="td"> </td>
+			<td class="td"> </td>
+		</tr>
+</table>
+
+<table align="left" style="font-size: 14px">
+	
+	<tr>
+		<td class="td"> <b >Anno</b> </td>
+		<td class="td"> <b >Popolazione </b><br />(milioni di persone) </td>
+	</tr>
+	<tr>
+		<td class="td"> 10000 a.C. </td>
+		<td class="td"> 2,4 </td>
+
+	</tr>
+	<tr>
+		<td class="td"> 9000 a.C. </td>
+		<td class="td"> 3,6 </td>
+	</tr>
+	<tr>
+		<td class="td"> 8000 a.C. </td>
+		<td class="td"> 5,1 </td>
+	</tr>
+	<tr>
+		<td class="td"> 7000 a.C. </td>
+		<td class="td"> 7,6  </td>
+	</tr>	
+	<tr>
+		<td class="td"> 6000 a.C. </td>
+		<td class="td"> 11,5 </td>
+
+	</tr>
+	<tr>
+		<td class="td"> 5000 a.C. </td>
+		<td class="td"> 17,9 </td>
+	</tr>
+	<tr>
+		<td class="td"> 4000 a.C. </td>
+		<td class="td"> 28 </td>
+	</tr>
+	<tr>
+		<td class="td"> 3000 a.C. </td>
+		<td class="td"> 45  </td>
+	</tr>	
+	<tr>
+		<td class="td"> 2000 a.C. </td>
+		<td class="td"> 72 </td>
+	</tr>
+	<tr>
+		<td class="td"> 1000 a.C. </td>
+		<td class="td"> 115 </td>
+	</tr>
+	<tr>
+		<td class="td"> 1 d.C. </td>
+		<td class="td"> 188  </td>
+	</tr>	
+
+	
+</table>
+
+<table align="left" style="font-size: 14px">
+	
+	<tr>
+		<td class="td"> <b >Anno</b> </td>
+		<td class="td"> <b >Popolazione </b><br />(milioni di persone) </td>
+	</tr>
+	<tr>
+		<td class="td"> 500 </td>
+		<td class="td"> 210 </td>
+
+	</tr>
+	<tr>
+		<td class="td"> 1000 </td>
+		<td class="td"> 295 </td>
+	</tr>
+	<tr>
+		<td class="td"> 1200  </td>
+		<td class="td"> 393 </td>
+	</tr>
+	<tr>
+		<td class="td"> 1400 </td>
+		<td class="td"> 390  </td>
+	</tr>	
+	<tr>
+		<td class="td"> 1600 </td>
+		<td class="td"> 554 </td>
+
+	</tr>
+	<tr>
+		<td class="td"> 1800 </td>
+		<td class="td"> 990 </td>
+	</tr>
+	<tr>
+		<td class="td"> 1900 </td>
+		<td class="td"> 1650 </td>
+	</tr>
+	<tr>
+		<td class="td"> 1940 </td>
+		<td class="td"> 2300 </td>
+	</tr>	
+	<tr>
+		<td class="td"> 1980  </td>
+		<td class="td"> 4400 </td>
+	</tr>
+	<tr>
+		<td class="td"> 2000 </td>
+		<td class="td"> 6100 </td>
+	</tr>
+	<tr>
+		<td class="td"> 2020 </td>
+		<td class="td"> 7700 </td>
+	</tr>
+
+</table>
+		
+
+&emsp;
+&emsp;
+
+
+
+<img src="WorldPeople.png" width=40%" style="display: block;">
+<br>
+
+</br>
+
+<p>
+Rappresentiamo i dati in un grafico cartesiano in modo da poterli analizzare in modo intuitivo.
+Se rappresentiamo i dati in un grafico cartesiano ordinario (consideriamo negative le date a.C.) 
+otteniamo il risultato in figura:
+</p>
+
+<img src="PopLinear.png" width="40%">
+
+
+<p>
+
+Il grafico è corretto ma non permette di cogliere molti aspetti della dinamica della popolazione mondiale: il fatto di dover rappresentare in ordinata valori fino a 7700 milioni ci costringe a scegliere una scala in cui i valori fino ad alcune decine di milioni non sono distinguibili. Dal grafico la popolazione sembra essere rimasta costante fino al 3000 a.C., mentre in realtà è aumentata di 20 volte!
+</p>
+<p>
+Per rappresentare dati che differiscono di diversi ordini di grandezza, senza che i dati con valori piccoli risultino graficamente indistinguibili, possiamo utilizzare una scala logaritmica. 
+</p>
+<p>
+Rappresentiamo cioè in un grafico cartesiano il valore del logaritmo decimale della quantità che ci interessa. Per facilitare la lettura del grafico, però, indicheremo sull’asse il valore della quantità originale.
+</p>
+<p>
+Poiché \( \log⁡ 1 = 0 \), \( \log⁡10=1\), \( \log⁡100=2\), \( \log⁡1000=3 \) sull’asse i valori 1, 10, 100, 1000 ecc… 
+risulteranno alla stessa distanza: la scala si contrae man mano che i valori aumentano. 
+Lo stesso vale anche per valori minori di 1: \( \log 0,1=-1\),\( \log 0,01=-2 \) ecc…
+</p>
+<img src="CartaSemilogB.png" width="30%">
+
+<p>
+In questo caso utilizzeremo una scala logaritmica solo per le ordinate (questo tipo di grafico è detto anche semi-logaritmico).
+Calcoliamo dunque il logaritmo decimale della popolazione costruendo una terza colonna della tabella:
+</p>
+
+	<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<header>
+	<table align="left" style="font-size: 14px">
+		
+		<tr>
+			<td class="td"> <b >Anno</b> </td>
+			<td class="td"> <b >Popolazione </b><br />(milioni di persone) </td>
+			<td class="td">  \( \log⁡ P \) </td>
+		</tr>
+		<tr>
+			<td class="td"> 10000 a.C. </td>
+			<td class="td"> 2,4 </td>
+			<td class="td"> 0,4 </td>
+		</tr>
+		<tr>
+			<td class="td"> 9000 a.C. </td>
+			<td class="td"> 3,6 </td>
+			<td class="td"> 0,6 </td>
+		</tr>
+		<tr>
+			<td class="td"> 8000 a.C. </td>
+			<td class="td"> 5,1 </td>
+			<td class="td"> 0,7 </td>
+		</tr>
+		<tr>
+			<td class="td"> 7000 a.C. </td>
+			<td class="td"> 7,6  </td>
+			<td class="td"> 0,9 </td>
+		</tr>	
+		<tr>
+			<td class="td"> 6000 a.C. </td>
+			<td class="td"> 11,5 </td>
+			<td class="td"> 1,1 </td>
+		</tr>
+		<tr>
+			<td class="td"> 5000 a.C. </td>
+			<td class="td"> 17,9 </td>
+			<td class="td"> 1,3 </td>
+		</tr>
+		<tr>
+			<td class="td"> 4000 a.C. </td>
+			<td class="td"> 28 </td>
+			<td class="td"> 1,4 </td>
+		</tr>
+		<tr>
+			<td class="td"> 3000 a.C. </td>
+			<td class="td"> 45  </td>
+			<td class="td"> 1,7 </td>
+		</tr>	
+		<tr>
+			<td class="td"> 2000 a.C. </td>
+			<td class="td"> 72 </td>
+			<td class="td"> 1,9 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1000 a.C. </td>
+			<td class="td"> 115 </td>
+			<td class="td"> 2,1 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1 d.C. </td>
+			<td class="td"> 188  </td>
+			<td class="td"> 2,3 </td>
+		</tr>	
+
+		
+	</table>
+</header>			
+
+<header>
+	<table align="left" style="font-size: 14px">
+		
+		<tr>
+			<td class="td"> <b >Anno</b> </td>
+			<td class="td"> <b >Popolazione </b><br />(milioni di persone) </td>
+			<td class="td">  \( \log⁡ P \) </td>
+		</tr>
+		<tr>
+			<td class="td"> 500 </td>
+			<td class="td"> 210 </td>
+			<td class="td"> 2,3 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1000 </td>
+			<td class="td"> 295 </td>
+			<td class="td"> 2,5 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1200  </td>
+			<td class="td"> 393 </td>
+			<td class="td"> 2,6 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1400 </td>
+			<td class="td"> 390  </td>
+			<td class="td"> 2,6 </td>
+		</tr>	
+		<tr>
+			<td class="td"> 1600 </td>
+			<td class="td"> 554 </td>
+			<td class="td"> 2,7 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1800 </td>
+			<td class="td"> 990 </td>
+			<td class="td"> 3,0 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1900 </td>
+			<td class="td"> 1650 </td>
+			<td class="td"> 3,2 </td>
+		</tr>
+		<tr>
+			<td class="td"> 1940 </td>
+			<td class="td"> 2300 </td>
+			<td class="td"> 3,4 </td>
+		</tr>	
+		<tr>
+			<td class="td"> 1980  </td>
+			<td class="td"> 4400 </td>
+			<td class="td"> 3,6 </td>
+		</tr>
+		<tr>
+			<td class="td"> 2000 </td>
+			<td class="td"> 6100 </td>
+			<td class="td"> 3,8 </td>
+		</tr>
+		<tr>
+			<td class="td"> 2020 </td>
+			<td class="td"> 7700 </td>
+			<td class="td"> 3,9 </td>
+		</tr>
+
+	</table>
+</header>			
+
+<p>
+Possiamo rappresentare i dati con l’anno in ascissa e il logaritmo della popolazione in ordinata:
+</p>
+
+<img src="LogPopolazione.png" width="40%">
+
+<p>
+Per leggere più facilmente i valori effettivi della popolazione indichiamo ora sull’asse delle ordinate direttamente il valore della popolazione stessa:
+</p>
+
+<img src="PopolazioneSemilog.png" width="40%">
+
+<p>
+Le linee orizzontali della griglia corrispondono ai valori di y (la popolazione) pari a 2, 3, 4, 5, 6, 7, 8, 9 tra le linee 1 e 10, a 20, 30, 40, 50, 60, 70, 80, 90 tra 10 e 100 e così via. Da questa griglia è possibile osservare chiaramente come la distanza grafica tra i valori diminuisca man mano che i valori aumentano. 
+Per esempio osserviamo che la linea corrispondente a 3 è circa a metà tra 1 e 10, perché Log 1=0, Log 3≈0,5, Log 10=1. Analogamente la linea corrispondente a 30 è circa a metà tra 10 e 100 perché Log 30≈1,5, Log 100=2.
+</p>
+<p>
+I fogli elettronici, i linguaggi di programmazione come Python e altri programmi per creare grafici a partire dai dati permettono di costruire il grafico in scala logaritmica direttamente, anche senza prima calcolare separatamente il valore del logaritmo dei dati.
+</p>
+<p>
+Nel grafico ottenuto in questo modo è possibile osservare anche la variazione di popolazione nei primi millenni a partire dal 10000 a.C..
+Analizziamo alcune caratteristiche del grafico in scala logaritmica:
+</p>
+<ul> 
+<li>
+	Fino circa all’anno 1 i dati stanno approssimativamente su di una retta; vedremo nel problema 3 che questo indica una crescita esponenziale, cioè una crescita a ritmo costante (ogni anno la popolazione cresce della stessa percentuale).
+</li>
+<li>
+Si osservano due momenti di stasi della crescita: nei primi secoli d.C. e attorno al XIII-XIV secolo d.C. , quest’ultimo legato all’epidemia di peste in Europa.
+</li>
+<li>
+Negli ultimi sei secoli la rapidità di crescita è aumentata rapidamente. Solo da circa il 1963 la crescita ha cominciato a rallentare, ma questo dato non si osserva nel grafico perché sarebbe necessario studiare i dati dell’ultimo secolo nel dettaglio 
+</li>
+</ul>
+
+
+	
+<p><h2>Dal grafico alla legge</h2></p>	
+
+
+
+<p>
+Se i dati rappresentati in scala semilogaritmica sono allineati su di una retta, qual è il legame tra le due grandezze?
+</p>
+<p>
+Consideriamo un esempio. La seguente tabella riporta il numero di transistor integrati nelle CPU dei computer nel corso degli anni.
+</p>
+<header>
+	<table align="left" style="font-size: 14px">
+		
+		<tr>
+			<td class="td"> <b >Anno</b> </td>
+			<td class="td"> 1971 </td>
+			<td class="td"> 1980 </td>
+			<td class="td"> 1985 </td>
+			<td class="td"> 1990 </td><br>
+</br>
+			<td class="td"> 1995 </td>
+			<td class="td"> 2000 </td>
+			<td class="td"> 2011 </td>
+		</tr>
+		<tr>
+			<td class="td"> <b >n. Transistor</b> </td>
+			<td class="td"> 2300 </td>
+			<td class="td"> 25000 </td>
+			<td class="td"> 300000 </td>
+			<td class="td"> 1200000 </td>
+			<td class="td"> 10000000 </td>
+			<td class="td"> 90000000 </td>
+			<td class="td"> 2600000000 </td>
+		</tr>
+	</table>
+</header>	
+<br>		
+</br>
+<p>
+Il numero di transistor varia di 6 ordini di grandezza, quindi è opportuno rappresentarlo con una scala logaritmica.
+</p>
+<p>
+Per semplicità contiamo gli anni a partire dal 1970, quindi riscriviamo la tabella come segue
+</p>
+
+<header>
+	<table align="left" style="font-size: 14px">
+		
+		<tr>
+			<td class="td"> <b >Anno</b> </td>
+			<td class="td"> 1 </td>
+			<td class="td"> 10 </td>
+			<td class="td"> 15 </td>
+			<td class="td"> 20 </td>
+			<td class="td"> 25 </td>
+			<td class="td"> 30 </td>
+			<td class="td"> 41 </td>
+		</tr>
+		<tr>
+			<td class="td"> <b >n. Transistor</b> </td>
+			<td class="td"> 2300 </td>
+			<td class="td"> 25000 </td>
+			<td class="td"> 300000 </td>
+			<td class="td"> 1200000 </td>
+			<td class="td"> 10000000 </td>
+			<td class="td"> 90000000 </td>
+			<td class="td"> 2600000000 </td>
+		</tr>
+		<tr>
+			<td class="td"> <b >Log (n. Trans)</b> </td>
+			<td class="td"> 3,4 </td>
+			<td class="td"> 4,4 </td>
+			<td class="td"> 5,5 </td>
+			<td class="td"> 6,1 </td>
+			<td class="td"> 7 </td>
+			<td class="td"> 9,9 </td>
+			<td class="td"> 14,1 </td>
+		</tr>
+	</table>
+</header>			
+
+<br>
+</br>
+
+<p>
+Otteniamo il grafico:
+</p>
+<img src="LeggeMoore.png" width="40%">
+
+<br>
+</br>
+
+I punti che rappresentano i dati sono quasi perfettamente allineati lungo una retta che passa per i due punti estremi. 
+Poiché il grafico è semilogaritmico, questo significa che c’è una relazione lineare tra il logaritmo di \( y \) e \( x \):
+$$ \log y = m x + q $$
+Per ottenere la relazione esplicita tra \( y \) e \( x \) poniamo entrambi i membri dell’uguaglianza come esponenti a 10:
+$$ 10^{\log⁡ y} = 10^{m⋅ x + q}	\rightarrow	y = 10^{m⋅x}⋅10^q = y_0⋅10^{m⋅x} $$
+dove abbiamo posto \( y_0 = 10^q \).
+<p>
+
+In conclusione:
+</p>
+Se la relazione tra due grandezze è rappresentata da una retta in un grafico semilogaritmico l’equazione della relazione è espressa da una legge esponenziale, del tipo
+$$ y= y_0⋅10^{m⋅x} $$
+dove l’esponente \( m \) rappresenta il coefficiente angolare della retta. Date due coppie di valori \( m \) si può calcolare da
+ 
+ $$ m = \frac{\log y_B-\log y_A}{ x_B- x_A } $$
+
+Ottenuto \( m \), il coefficiente \( y_0 \) si può ottenere da uno dei dati esplicitando dalla relazione:
+
+$$ y_0 = \frac{y_A}{10^{m⋅x_A}} $$
+
+Il valore di \( y_0 \) è il valore di \( y \) in corrispondenza di \( x=0 \).
+<p>Nel nostro caso:
+</p>
+$$ m = \frac{ \log⁡(2.6⋅10^9 )- \log ⁡2300}{41-1} \simeq 0.15 $$
+$$ y_0 = \frac{2300}{10^{0.15⋅1}} \simeq 1600 $$
+
+e la legge si può scrivere
+
+$$ y = 1600 \cdot 10^{0.15⋅x} $$
+
+
+
+
+
+
+
+
+
