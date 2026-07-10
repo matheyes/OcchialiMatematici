@@ -1,0 +1,59 @@
+&emsp; <!-- empty space -->
+&nbsp; spazio più largo
+
+<ul> <!unordered list>			ELENCO PUNTATO
+	<li>	primo punto </li>
+	<li>	secondo punto </li>
+</ul>
+
+					TABELLA
+	<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+	<table align="center">
+		<tr>
+			<td class="td"> a11 </td>
+			<td class="td"> a12 </td>
+			<td class="td"> a13 </td>
+		</tr>
+		
+		<tr>
+			<td class="td"> a21 </td>
+			<td class="td"> a22 </td>
+			<td class="td"> a23 </td>
+		</tr>
+
+	</table>
+
+<table align="left">
+		<tr>
+			<td class="td"> </td> 
+			<td class="td"> </td>
+		</tr>
+
+		<tr>
+			<td class="td"> </td>
+			<td class="td"> </td>
+		</tr>
+</table>
+
+
+
+<img src="HRvsGini2022Linear.png" width="50%">	IMMAGINE
+
+<a href="Data01\treGiorni\CongoEquatore.csv" download class="col-link"> 01-03/04/2020 </a> LINK
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> LATEX
+
+
+LINK INTERNI
+<a href="#sezione-1">Vai alla Sezione 1</a>
+
+<h2 id="sezione-1">Questa è la destinazione</h2>
+
+PER ANDARE A CAPO (DOPO UNA TABELLA)
+<div style="clear: both;"></div>
