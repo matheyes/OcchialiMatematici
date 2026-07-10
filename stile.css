@@ -102,15 +102,15 @@ a.col-link:hover
 color: #c0392b;        /* colore al passaggio del mouse */
 }
 
-.link-indice {
+a.link-indice {
     color: darkred;
 }
 
-.link-indice:visited {
+a.link-indice:visited {
     color: darkred;
 }
 
-.link-indice:hover {
+a.link-indice:hover {
     color: red;
 }
 
