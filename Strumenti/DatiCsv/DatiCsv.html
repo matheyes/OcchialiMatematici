@@ -59,6 +59,180 @@
 <article>
 
 	<h1 class="titolo" >I dati e i file csv </h1>
+	
+<h4>
+
+<p >
+<a href="#01-IFileCsv" class="link-indice"> 1. I file csv</a>
+</p><p>
+<a href="#02-LeggereScrivereCsv" class="link-indice"> 2. Leggere e scrivere file csv con Blocco Note</a>
+</p><p>
+<a href="#03-LeggereScrivereCsvConFoglioElettronico" class="link-indice"> 3. Leggere e scrivere file csv con il Foglio Elettronico</a>
+</p><p>
+<a href="#04-LeggereScrivereCsvConPython" class="link-indice"> 4. Leggere e scrivere file csv con Python</a>	
+</p>
+
+</h4>
+
+<h2 id="01-IFileCsv">1. I file csv</h2>	
+	
+	
+	
 <p>
-COMING SOON
+I dati sono spesso organizzati in tabelle, come la seguente:
+</p>
+
+<table class="table_b" align="left" >
+		<tr>
+			<td class="td_b"> <b>Nome</b></td> 
+			<td class="td_b"> <b>AnnoDiNascita</b></td>
+			<td class="td_b"> <b>Peso</b></td> 
+			<td class="td_b"> <b>Altezza</b></td>
+		</tr>
+		<tr>
+			<td class="td_b"> Carlo</td>
+			<td class="td_b"> 1988</td>
+			<td class="td_b"> 82.5</td> 
+			<td class="td_b"> 185</td>
+		</tr>
+		<tr>
+			<td class="td_b"> Paola</td>
+			<td class="td_b"> 1995</td>
+			<td class="td_b"> 58.2</td> 
+			<td class="td_b"> 176</td>
+		</tr>
+		<tr>
+			<td class="td_b"> Michele</td>
+			<td class="td_b"> 1999</td>
+			<td class="td_b"> 73.0</td> 
+			<td class="td_b"> 181</td>
+		</tr>
+</table>
+<div style="clear: both;"></div>
+<p>
+La prima riga contiene le intestazioni delle colonne mentre le righe successive contengono i dati veri e propri. Ogni riga, eccetto la prima, viene chiamata un <i>record</i> e consiste in un insieme completo di informazioni relativa a una singola entità.
+</p>
+<p>
+Molti programmi, compresi i fogli elettronici, utilizzano tabelle di questo tipo per registrare un insieme di dati.
+</p>
+<img src="TabellaFE.PNG" width="60%">
+
+<p>
+I fogli elettronici tuttavia sono programmi molto complessi e in generali creano file che contengono molte informazioni in più rispetto ai soli dati: formattazione, formule, grafici...
+</p>
+<p>
+I file che contengono solo i dati, organizzati appunto in tabella, sono i file CSV. Questi file hanno il vantaggio di poter essere letti da tante applicazioni diverse, compresi i programmi scritti con Python, C, R e altri linguaggi grazie al fatto di essere essenziali. 
+L'acronimo CSV significa <i>Comma Separated Values</i>, cioè <i>Valori Separati da Virgola</i>: ogni record è scritto su di una riga, con i diversi valori separati appunto da una virgola. L'esempio che abbiamo utilizzato sopra, aperto dal programma <i>Blocco Note</i>, apparirebbe così:
+
+
+</p>
+<img src="TabellaCSV.PNG" width="50%">
+<p>
+
+Questo è lo standard internazionale per i file CSV, ma poiché in Italia spesso si usa la virgola come separatore decimale, in questo caso si usa il punto e virgola per separare i diversi valori di un record. Nel sito <i>Occhiali Matematici</i> tuttavia usiamo sempre il punto come separatore decimale e la virgola come separatore tra i valori, per permettere di utilizzare i file  anche con linguaggi di programmazione che usano questo standard.
+
+
+
+<h2 id="02-LeggereScrivereCsv">2. Leggere e scrivere file csv con Blocco Note</h2>	
+
+<i>Blocco Note</i> di Windows è un editor di testo essenziale, che può creare e manipolare file di testo senza formattazioni particolari. Può quindi essere usato anche per per scrivere un file CSV secondo la struttura che abbiamo indicato prima:
+<ul>
+<li>Nella prima riga le intestazioni delle colonne, separate da virgole (o eventualmente da punti e virgola)</li>
+<li>Nelle righe successive i valori delle grandezze relative ai diversi enti, sempre separati da virgole (o punti e virgola)</li>
+</ul>
+</p>
+
+<img src="TabellaCSV.PNG" width="50%">
+
+<p>
+Osserviamo tuttavia che Blocco note di default salva e apre solo file con l'estensione <code>.txt</code>. Per creare un file <code>.csv</code> bisogna prima crearlo come <code>.txt</code> e poi rinominarlo, mentre per aprirlo o modificarlo bisogna selezionarlo con il tasto destro del mouse e poi scegliere l'opzione <i>Apri con ...</i> e selezionare <i>Blocco Note</i>.
+
+<h2 id="03-LeggereScrivereCsvConFoglioElettronico">3. Leggere e scrivere file csv con il Foglio Elettronico</h2>	
+
+<p>
+	Abbiamo sottolineato che i file <code>.csv</code> rispecchiano la struttura dei file di un foglio elettronico, ma questi ultimi di solito contengono molte più informazioni. Per creare un file <code>.csv</code> a partire da una tabella in un foglio elettronico potete selezionare il comando <i>Salva col nome...</i> e poi scegliere l'opzione CSV.
+</p>
+<p>
+Se invece volete aprire un file <code>.csv</code> con un foglio elettronico potete provare le procedure seguenti:
+<ul>
+<li>
+Fate doppio clic sul file: a seconda delle impostazioni delle app nel vostro pc è possibile che il foglio elettronico sia già il programma di elezione per aprire i <code>.csv</code>; dovrebbe anche aprirsi una finestra di dialogo che permette di specificare i separatori usati (virgola, punto e virgola o altro).
+</li>
+<li>
+In alternativa selezionato il file col tasto destro, scegliete <i>Apri con...</i> e infine il foglio elettronico desiderato; anche in questo caso dovrebbe aprirsi la finestra di dialogo per specificare i separatori.
+</li>
+<li>
+Se con Excel il file non si apre, o non viene formattato a dovere perché non si apre la finestra di dialogo, aprite prima il foglio elettronico; dal menù <i>Dati</i> scegliete <i>Carica dati esterni</i> con l'opzione <i>da testo</i> e infine selezionate il file che desiderate.
+</li>
+<li>
+Se con Libre Office Calc il file non si apre o non presenta la finestra di dialogo è sufficiente aprire prima il foglio elettronico poi dal menù <i>File</i> scegliere il comando <i>Apri...</i> e selezionare il file.
+</li>
+</ul>
+</p>
+
+<h2 id="04-LeggereScrivereCsvConPython">4. Leggere e scrivere file csv con Python</h2>	
+	
+<p>
+Il metodo più comune per gestire la lettura e la scrittura dei dati su file CSV in Python è usare il modulo <code>pandas</code>. È utile usare in parallelo anche il modulo <code>numpy</code>
+per gestire gli array.	
+</p>
+<p>
+Il comando <code>pandas.read_csv</code> crea un <i>dataframe</i>, cioè una struttura di dati equivalente alla tabella ma utilizzabile in Python.
+</p>
+
+<pre ><code>
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('tabella.csv')
+
+</code></pre>
+
+
+<p>
+Se digitiamo <code>df</code>, cioè il nome che abbiamo assegnato al dataframe, otteniamo una stampa della tabella (se è lunga, solo le prime e le ultime righe):
+</p>
+
+<img src="TabellaPy.PNG" width="50%">
+
+<p>
+ma soprattutto abbiamo a disposizione tutte le colonne, o i singoli elementi, utilizzando il nome del dataframe e quello della caratteristica, separate da un punto:
+</p>
+
+<img src="ColonnePy.PNG" width="50%">
+
+<p>
+Per molti usi i dati possono essere utilizzati così, ma possiamo tasformarti in veri e prorpi array numpy con il metodo <code>values</code>:
+</p>
+
+<pre ><code>
+Pesi=df["Peso"].values
+</code></pre>	
+	
+<img src="array.PNG" width="50%">	
+
+
+<p>
+Il procedimento inverso è quello di costruire un dataframe a partire da un insieme di array, e scrivere il risultato in un file CSV. Supponiamo di avere tre array, uno con i nomi dei pianeti, uno con le distanze dal Sole e uno con i periodo orbitali. Possiamo usare il comando <code>DataFrame</code> per costruire il dataframe, passando gli array come un dizionario, e infine il metodo <code>to_csv</code> per scrivere il risultato in un file <code>csv</code>:
+</p>
+
+<pre ><code>
+Distanza=np.array([0.39, 0.72, 1.0, 1.52]) #distanza dal Sole in U.A.
+Periodo=np.array([0.24,0.62, 1.0,1.88]) #periodo orbitale in anni
+Pianeti=np.array(["Mercurio","Venere","Terra","Marte"])
+
+SistemaSolare=pd.DataFrame({
+    "Pianeta":Pianeti,
+    "Distanza":Distanza,
+    "Periodo":Periodo})
+
+SistemaSolare.to_csv("DatiSS.csv",index=False) #index=False serve per non numerare le righe
+
+</code></pre>
+
+<img src="SistemaSolare.PNG" width="50%">
+
+<p>
+Questo è particolarmente utile se i dati devono poi essere elaborati con un altro programma.
 </p>

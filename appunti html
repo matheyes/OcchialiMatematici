@@ -13,7 +13,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-	<table align="center">
+<table align="center">
 		<tr>
 			<td class="td"> a11 </td>
 			<td class="td"> a12 </td>
@@ -40,6 +40,22 @@ table, th, td {
 		</tr>
 </table>
 
+		TABELLA CON BORDI
+<table class="table_b" align="left">
+		<tr>
+			<td class="td_b"> </td> 
+			<td class="td_b"> </td>
+			<td class="td_b"> </td> 
+			<td class="td_b"> </td>
+		</tr>
+
+		<tr>
+			<td class="td_b"> </td>
+			<td class="td_b"> </td>
+			<td class="td_b"> </td> 
+			<td class="td_b"> </td>
+		</tr>
+</table>
 
 
 <img src="HRvsGini2022Linear.png" width="50%">	IMMAGINE
@@ -54,6 +70,31 @@ LINK INTERNI
 <a href="#sezione-1">Vai alla Sezione 1</a>
 
 <h2 id="sezione-1">Questa è la destinazione</h2>
+
+INDICE
+<h4>
+
+<p >
+<a href="#01-XXX" class="link-indice"> 1. XXX</a>
+</p><p>
+<a href="#02-XXY" class="link-indice"> 2. XXY</a>
+</p><p>
+<a href="#03-XXZ" class="link-indice"> 3. XXZ</a>
+</p><p>
+<a href="#04-YXX" class="link-indice"> 4. YXX</a>	
+</p>
+
+</h4>
+
+<h2 id="01-XXX">1. XXX</h2>	
+
+<h2 id="02-XXY">2. XXY</h2>	
+
+<h2 id="03-XXZ">3. XXZ</h2>	
+
+<h2 id="04-YXX">4. YXX</h2>	
+
+
 
 PER ANDARE A CAPO (DOPO UNA TABELLA)
 <div style="clear: both;"></div>
