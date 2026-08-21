@@ -15,6 +15,10 @@
 	<title> 
 	Aspettativa di vita
 	</title> 
+	
+	<!-- per usare latex-->
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	
 </head>
 
 	
@@ -73,40 +77,91 @@ dove sono stati raccolti e rielaborati a partire da <td class="td"> <a href="htt
 <td class="td"> <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_SHA%40DF_SHA&df[ag]=OECD.ELS.HD&dq=.A.EXP_HEALTH.PT_B1GQ._T.._T.._T...&pd=2015,&to[TIME_PERIOD]=false" download class="col-link"> OCSE</a></td>.
 </p>
 <p>
-I primi tre grafici mostrano la spesa sanitaria e l'aspettativa di vita di alcuni Paesi selezionati. 
+Il primo grafico mostra i dati di 59 Paesi tutti insieme, un colore diverso per ogni paese.
 I dati, quando disponibili, vanno dal 1970 al 2023. 
-I grafici sono stati separati in piccoli gruppi di Paesi in modo che sia possibile distinguere l'andamento di ciascuno ma la scala è la stessa, in modo da facilitare il confronto.
-L'ultimo grafico mostra i dati di 59 Paesi tutti insieme.
+I successivi tre grafici mostrano la spesa sanitaria e l'aspettativa di vita di alcuni Paesi selezionati. 
+Questi sono stati separati in piccoli gruppi di Paesi in modo che sia possibile distinguere l'andamento di ciascuno ma la scala è la stessa, in modo da facilitare il confronto.
+
 </p>
 <p>
-<img src="LifeVsHE5PaesiA.png" width="48%">
-<img src="LifeVsHE5PaesiB.png" width="48%">
-</p>
-<p>
-<img src="LifeVsHE5PaesiC.png" width="48%">
 <img src="LifeVsHE59Paesi.png" width="48%">
+<img src="LifeVsHE5PaesiA.png" width="48%">
+</p>
+<p>
+<img src="LifeVsHE5PaesiB.png" width="48%">
+<img src="LifeVsHE5PaesiC.png" width="48%">
 </p>
 <p>
 	
 Per dare un senso al confronto tra le spese sanitarie in Paesi diversi l'unità di misura utilizzata è quella dei cosiddetti 
 <td class="td"> <a href="https://ourworldindata.org/international-dollars" download class="col-link"> <i>dollari internazionali</i></a></td>. 	
 Si tratta di una moneta fittizia calcolata per ogni paese tenendo conto dell'inflazione e del costo della vita locale in modo che in ogni luogo e in ogni anno un dollaro internazionale permetta di acquistare sempre gli stessi beni.
+</p>
+<p>
+Il prossimo grafico è basato sugli stessi dati visualizzati in modo diverso. Per un ristretto intervallo di spesa, a passi di 200 $ 
+(da 0$ a 100$, da 100$ a 300$, da 300$ a 500$ ...) i punti rappresentano l'aspettativa di vita media e le barre la dispersione tra i diversi paesi (calcolata come semidispersione).
+</p>
+<p>
+<img src="LifeVsHEPuntiEIncertezze.png" width="48%">
+</p>
+<p>
+I prossimi tre grafici rappresentano la sovrapposizione di una curva analitica che riprenda l'andamento dell'aspettativa di vita \( y \) in funzione della spesa sanitaria \( x \).
+</p>
+<p>
+Il primo grafico è un arco di iperbole di equazione
+
+$$ y= \frac{k}{x-x_0} + y_0 $$
+ 
+con \( y_0 = 84 \) anni, \( x_0 = -1000 \) $ e \( k = -20000\) anni \( \cdot \) $.
+</p>
+<p>
+Il secondo grafico è una curva logistica di equazione
+
+$$ y = \frac{y_0}{1+e^{-r(x-x_0)}} $$
+
+con \( y_0 = 81.5 \) anni, \( x_0 = -1800 \) $ e \( r = 0.0008 \) \( \$^{-1} \).
+</p>
+<p>
+Il terzo grafico è una curva logaritmica di equazione
+
+$$ y=\alpha + \beta \log(x) $$
+
+con \( \alpha = 45 \) anni, \( \beta = 4.2 \) $.
+</p>
+<p>
+<img src="LifeVsHEPuntiEIncertezzeHyperbolic.png" width="30%">
+<img src="LifeVsHEPuntiEIncertezzeLogistic.png" width="30%">
+<img src="LifeVsHEPuntiEIncertezzeLogarithmic.png" width="30%">
+</p>
+<p>
+L'ultimo grafico riporta tutte e tre le curve insieme, per facilitare il confronto.
+</p>
+<p>
+<img src="LifeVsHEPuntiEIncertezze3Curve.png" width="48%">
+</p>
+
 	
 <p><h2>Guida all’analisi</h2></p>
 
-<p>Osserva l'ultimo grafico, che riporta i dati relativi a 59 Paesi:</p>
+<p>Osserva il primo grafico che riporta i dati relativi a 59 Paesi, anche paragonandolo al quinto:</p>
 <ul>
 	<li>Si può cogliere un andamento complessivo del legame tra spesa sanitaria e aspettativa di vita?</li>
 	<li>Senza considerare le differenze tra i singoli Paesi ma osservando solo il complesso delle curve, come si può interpretare la forma del grafico?</li>
 </ul>
-<p>Osserva i primi tre grafici, relativi ad alcuni Paesi specifici</p>
+<p>Osserva il secondo, terzo e quarto grafico, relativi ad alcuni Paesi specifici</p>
 <ul>
 	<li>Cerca di interpretare la forma dei grafici di alcuni dei Paesi rispetto alla curva complessiva, in relazione al loro sviluppo socio economico negli ultimi cinquant'anni</li>
 </ul>
-<p>Ci sono due curve che si discostano decisamente dall'andamento complessivo.</p>
+<p>Confrontando il primo e i tre successivi si osserva che ci sono due curve che si discostano decisamente dall'andamento complessivo.</p>
 <ul>
 	<li>Identifica i Paesi a cui queste curve sono relativi e cerca di interpretarne la forma particolare </li>
 </ul>
+<p>Analizza una o più delle curve utilizzate negli ultimi quattro grafici per riprodurre analiticamente il legame tra aspettativa di vita e spesa sanitaria:</p>
+<ul>
+	<li>Qual è il significato dei parametri della curva?</li>
+	<li>Che ipotesi implicite ci possono essere dietro all'uso di una curva piuttosto che un'altra?</li>
+</ul>
+
 
 
 <table align="center">

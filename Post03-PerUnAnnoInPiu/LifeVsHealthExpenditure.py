@@ -84,27 +84,38 @@ plt.show()
 #---------Fit a mano con logistica-----------------------------
 def logistic(t):
     # y=k/(1+exp(-r(t-t0)))
-    t0=-1000
-    k=81
-    r=0.001
+    t0=-1800
+    k=81.5
+    r=0.0008
     y=k/(1+np.exp(-r*(t-t0)))
     return y
 
 def logarithmic(t):
     #y=alpha + beta log(t)
-    alpha=44
+    alpha=45
     beta=4.2
     y=alpha + beta * np.log(t)
     return y
 
+def hyperbolic(t):
+    #y=kh/(t-t0)+y0
+    kh=-20000
+    t0=-1000
+    y0=84
+    y=kh/(t-t0)+y0
+    return y
+
 ageTh1=[] #logistica
 ageTh2=[] #logaritmica
+ageTh3=[] #iperbolica
 times=np.linspace(0,11000,200)
 for t in times:
     ageTh1.append(logistic(t))
     ageTh2.append(logarithmic(t))
+    ageTh3.append(hyperbolic(t))
 ageTh1=np.array(ageTh1)
 ageTh2=np.array(ageTh2)
+ageTh3=np.array(ageTh3)
 
 for country in Countries:
     Expences=LifeHealthExp2[LifeHealthExp2["Entity"]==country]["HealthExpenditurePerCapita"].values
@@ -116,9 +127,83 @@ for country in Countries:
 
 plt.plot(times,ageTh1,'b',label="logistic")
 plt.plot(times,ageTh2,'g',label="logarithmic")
+plt.plot(times,ageTh3,'y',label="hyperbolic")
 plt.legend()
 plt.title("Spesa sanitaria e aspettativa di vita")
 plt.xlabel("Spesa sanitaria procapite ($)")
 plt.ylabel("Asp. vita alla nascita")
 plt.grid()
 plt.show()
+
+LifeHealthExp3 = pd.read_csv('LifeVsHealthExpenditureDataNoOutliers.csv')
+
+spesaPasso=200
+ExpenceDots=[]
+LifeDots=[]
+yerror=[]
+for spesa in range(0,8000,spesaPasso):
+    Expences=LifeHealthExp3[LifeHealthExp3["HealthExpenditurePerCapita"]<=spesa+spesaPasso/2][LifeHealthExp3["HealthExpenditurePerCapita"]>spesa-spesaPasso/2]["HealthExpenditurePerCapita"].values
+    Life=LifeHealthExp3[LifeHealthExp3["HealthExpenditurePerCapita"]<=spesa+spesaPasso/2][LifeHealthExp3["HealthExpenditurePerCapita"]>spesa-spesaPasso/2]["LifeExpectancy"].values
+    ExpenceDots.append(spesa)
+    LifeDots.append(np.mean(Life))
+    Lifemax=np.max(Life)
+    Lifemin=np.min(Life)
+    dLife=(Lifemax-Lifemin)/2
+    yerror.append(dLife)
+    
+plt.errorbar(ExpenceDots,LifeDots,yerr=yerror, fmt='.',color='r')
+plt.xlim([0,13000])
+plt.ylim([50,86])
+plt.title("Spesa sanitaria e aspettativa di vita")
+plt.xlabel("Spesa sanitaria procapite ($)")
+plt.ylabel("Asp. vita alla nascita")
+plt.grid()
+plt.show()
+
+plt.errorbar(ExpenceDots,LifeDots,yerr=yerror, fmt='.',color='r')
+plt.plot(times,ageTh1,'b',label="logistic")
+plt.xlim([0,13000])
+plt.ylim([50,86])
+plt.title("Spesa sanitaria e aspettativa di vita")
+plt.xlabel("Spesa sanitaria procapite ($)")
+plt.ylabel("Asp. vita alla nascita")
+plt.legend()
+plt.grid()
+plt.show()
+
+plt.errorbar(ExpenceDots,LifeDots,yerr=yerror, fmt='.',color='r')
+plt.plot(times,ageTh2,'g',label="logarithmic")
+plt.xlim([0,13000])
+plt.ylim([50,86])
+plt.title("Spesa sanitaria e aspettativa di vita")
+plt.xlabel("Spesa sanitaria procapite ($)")
+plt.ylabel("Asp. vita alla nascita")
+plt.legend()
+plt.grid()
+plt.show()
+
+plt.errorbar(ExpenceDots,LifeDots,yerr=yerror, fmt='.',color='r')
+plt.plot(times,ageTh3,'y',label="hyperbolic")
+plt.xlim([0,13000])
+plt.ylim([50,86])
+plt.title("Spesa sanitaria e aspettativa di vita")
+plt.xlabel("Spesa sanitaria procapite ($)")
+plt.ylabel("Asp. vita alla nascita")
+plt.legend()
+plt.grid()
+plt.show()
+
+plt.errorbar(ExpenceDots,LifeDots,yerr=yerror, fmt='.',color='r')
+plt.plot(times,ageTh1,'b',label="logistic")
+plt.plot(times,ageTh2,'g',label="logarithmic")
+plt.plot(times,ageTh3,'y',label="hyperbolic")
+plt.xlim([0,13000])
+plt.ylim([50,86])
+plt.title("Spesa sanitaria e aspettativa di vita")
+plt.xlabel("Spesa sanitaria procapite ($)")
+plt.ylabel("Asp. vita alla nascita")
+plt.legend()
+plt.grid()
+plt.show()
+
+
