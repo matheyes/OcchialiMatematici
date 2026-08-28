@@ -15,6 +15,10 @@
 	<title> 
 	Aspettativa di vita
 	</title> 
+	
+	<!-- per usare latex-->
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 
 	
@@ -56,64 +60,91 @@
 	<img src="Copertina03.png" width="20%">
 	<h1 class="titolo" >Per un anno in più </h1>
 <p>
-Curarsi costa.  
+Nel film <i>In Time</i> di Andrew Niccol nel 2169 le persone sono geneticamente programmate per invecchiare fino a 25 anni. Da quel momento parte un timer nel braccio che scandisce il tempo che resta da vivere. Questo tempo può essere ceduto e acquistato ed è diventato la moneta di scambio per qualunque altro bene. Il risultato è che pochi ricchi vivono praticamente in eterno mentre i poveri devono lottare ogni giorno per conquistare un altro po' di tempo.
 </p>
 <p>
-Vivere a lungo costa. 
+Il film porta all'estremo il fatto che chi è ricco e potente ha più possibilità di vivere a lungo perché può permettersi cure costose, prevenzione efficace, uno stile di vita sano.
 </p>
 <p>
-Può essere a spese dello Stato, a spese dei privati, ma costa.
+Il legame tra la spesa sanitaria e la durata della vita esiste, come vedremo ora analizzando i dati, ma la spesa non è l'unico fattore determinante e le cose sono decisamente più complicate. Abitudini alimentari, esercizio fisico, patrimonio genetico e anche eventi casuali possono influire sul risultato.
 </p>
 <p>
-I grafici che osserviamo sotto mettono in relazione la spesa sanitaria di un Paese in un dato anno 
-con l'aspettativa di vita alla nascita in quel Paese.
-<p>
-I dati sono tratti da <td class="td"> <a href="https://ourworldindata.org/grapher/life-expectancy-vs-health-expenditure" download class="col-link"> Our World In Data</a></td>, 
-dove sono stati raccolti e rielaborati a partire da <td class="td"> <a href="https://population.un.org/" download class="col-link"> UN World Population Prospects</a></td> e 
-<td class="td"> <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_SHA%40DF_SHA&df[ag]=OECD.ELS.HD&dq=.A.EXP_HEALTH.PT_B1GQ._T.._T.._T...&pd=2015,&to[TIME_PERIOD]=false" download class="col-link"> OCSE</a></td>.
+Ci concentriamo ora comunque solo sul legame tra spesa sanitaria e aspettativa di vita e analizziamo i due grafici che contengono tutti i dati disponibili, l'andamento della relazione nei singoli paesi e il legame tra l'aspettiva di vita media  e una specifica spesa.
 </p>
+
 <p>
-I primi tre grafici mostrano la spesa sanitaria e l'aspettativa di vita di alcuni Paesi selezionati. 
-I dati, quando disponibili, vanno dal 1970 al 2023. 
-I grafici sono stati separati in piccoli gruppi di Paesi in modo che sia possibile distinguere l'andamento di ciascuno ma la scala è la stessa, in modo da facilitare il confronto.
-L'ultimo grafico mostra i dati di 59 Paesi tutti insieme.
-</p>
-<p>
-<img src="LifeVsHE5PaesiA.png" width="48%">
-<img src="LifeVsHE5PaesiB.png" width="48%">
-</p>
-<p>
-<img src="LifeVsHE5PaesiC.png" width="48%">
 <img src="LifeVsHE59Paesi.png" width="48%">
+<img src="LifeVsHEPuntiEIncertezze.png" width="43%">
+</p>
+
+<p>
+Da entrambi i grafici emerge una relazione abbastanza ben definita:
 </p>
 <p>
-	
-Per dare un senso al confronto tra le spese sanitarie in Paesi diversi l'unità di misura utilizzata è quella dei cosiddetti 
-<td class="td"> <a href="https://ourworldindata.org/international-dollars" download class="col-link"> <i>dollari internazionali</i></a></td>. 	
-Si tratta di una moneta fittizia calcolata per ogni paese tenendo conto dell'inflazione e del costo della vita locale in modo che in ogni luogo e in ogni anno un dollaro internazionale permetta di acquistare sempre gli stessi beni.
-	
-<p><h2>Guida all’analisi</h2></p>
+Partendo da una spesa nulla o molto bassa l'aspettativa di vita è tra i 60 e i 70 anni; in questo contesto basta un piccolo incremento di spesa per migliorare molto la situazione, come si osserva dal fatto che la curva sale rapidamente. Stimando la pendenza della curva dai primi quattro punti possiamo valutarla approssimativamente in 0.017 anni/$, cioè ogni dollaro di spesa in più aumenta l'aspettativa di vita di 0.017 anni (8 giorni).
+</p>
+<p>
+Procedendo verso valori di spesa più elevati tuttavia la pendenza della curva diminuisce: questo significa che ogni ulteriore dollaro speso ha un effetto minore del precedente, cioè ogni miglioramento diventa sempre più costoso. Infine, dai dati non è chiaro se nella parte destra del grafico la curva si appiattisce, che indicherebbe un'aspettativa di vita che non si può superare indipendentemente dalla spesa, o se continua a crescere sia pur sempre più lentamente.
+</p>
+<p>
+Queste considerazioni qualitative si possono rendere più quantitative utilizzando una funzione che approssimi i dati, come quelle rappresentate nei grafici seguenti. È importante però tenere presente che nessuna delle tre curve proposte si basa su un fondamento teorico della relazione, ma semplicemente sono curve relativamente semplici che hanno un andamento simile a quello dei dati.
+</p>
 
-<p>Osserva l'ultimo grafico, che riporta i dati relativi a 59 Paesi:</p>
-<ul>
-	<li>Si può cogliere un andamento complessivo del legame tra spesa sanitaria e aspettativa di vita?</li>
-	<li>Senza considerare le differenze tra i singoli Paesi ma osservando solo il complesso delle curve, come si può interpretare la forma del grafico?</li>
-</ul>
-<p>Osserva i primi tre grafici, relativi ad alcuni Paesi specifici</p>
-<ul>
-	<li>Cerca di interpretare la forma dei grafici di alcuni dei Paesi rispetto alla curva complessiva, in relazione al loro sviluppo socio economico negli ultimi cinquant'anni</li>
+<p>
+<img src="LifeVsHEPuntiEIncertezzeHyperbolic.png" width="30%">
+<img src="LifeVsHEPuntiEIncertezzeLogistic.png" width="30%">
+<img src="LifeVsHEPuntiEIncertezzeLogarithmic.png" width="30%">
+</p>
+<p>
+<img src="LifeVsHEPuntiEIncertezze3Curve.png" width="48%">
+</p>
+Il primo grafico è un arco di iperbole di equazione
+
+$$ y= \frac{k}{x-x_0} + y_0 $$
+ 
+con \( y_0 = 84 \) anni, \( x_0 = -1000 \) $ e \( k = -20000\) anni \( \cdot \) $. Questa curva è stata scelta perché è la più semplice tra le funzioni elementari a riprodurre l'andamento osservato. La caratteristica di questa curva è che ha un asintoto orizzontale di equazione \( y=y_0 \), quindi prevede che l'aspettativa di vita media non possa superare il valore di \( y_0 \), cioè 84 anni. Inoltre possiamo stimare la pendenza della curva nella fase iniziale calcolando il coefficiente angolare della tangente per \( x = 0 \). Otteniamo \( m = - \frac{k}{x_0^2} = 0.02 \) anni/$, molto simile al valore stimato dal grafico. 
+</p>
+
+<p>
+Il secondo grafico è una curva logistica di equazione
+
+$$ y = \frac{y_0}{1+e^{-r(x-x_0)}} $$
+
+con \( y_0 = 81.5 \) anni, \( x_0 = -1800 \) $ e \( r = 0.0008 \) \( \$^{-1} \). La funzione logistica è leggermente più complessa delle altre proposte ed è stata inserita perché è stata proposta nel primo articolo che ha studiato la relazione tra la ricchezza e l'aspettativa di vita (Preston, S. H. (1975). <i>The Changing Relation Between Mortality and the Level of Economic Development.</i> Population Studies, 29(2), 231–248, Taylor & Francis).
+Anche questa curva ha un asintoto orizzontale di equazione \( y=y_0 \), quindi prevede che l'aspettativa di vita media non possa superare il valore di \( y_0 \), che in questo caso è 81.5 anni. Il valore è diverso da quello dell'iperbole perché quest'ultima si avvicina all'asintoto più lentamente. Valutiamo la rapidità di crescita iniziale calcolando la pendenza della tangente in \( x = 0 \), cioè  \( m = f'(0) = \frac{r y_0 e^{r x_0}}{(1+e^{r x_0})^2} = 0.01 \) anni/$. Dal grafico che paragona le tre curve si può osservare che effettivamente la logistica è la meno pendente per \( x = 0 \).
+</p>
+
+
+<p>
+Il terzo grafico è una curva logaritmica di equazione
+
+$$ y=\alpha + \beta \log(x/x_0) $$
+
+con \( \alpha = 45 \) anni, \( \beta = 4.2 \) anni e \( x_0 = 1 \) $.
+
+Questa funzione è stata inserita perché permette di descrivere un fenomeno con una crescita perenne ma sempre più lenta. Questa curva sembra quella che si avvicina di più ai valori centrali per ogni spesa ma nell'intervallo considerato, viste anche le fluttuazioni tra diversi Paesi, le tre curve si comportano in modo molto simile; cambia invece il comportanmento per spese superiori agli 8000 $, cioè fuori dall'intervallo dei dati: in questo caso la curva logaritmica è l'unica che non ha un asintoto; nonostante cresca sempre più lentamente non ha un limite superiore. Questa curva ha dominio \( x > 0 \), quindi non possiamo valutare né il valore né la pendenza in \( x = 0 \). Stimiamo allora la rapidità iniziale di cambiamento in \( x = 100 \) $, anche in questo caso come la pendenza della tangente, cioè  \( m = f'(100) = \frac{\beta}{100} = 0.042 \) anni/$, la maggiore delle tre.
+</p>
+
+<p>
+Analizziamo infine la forma di alcune delle curve rappresentative dei diversi Paesi.
+</p>
+<p>
+<img src="LifeVsHE5PaesiA.png" width="30%">
+<img src="LifeVsHE5PaesiB.png" width="30%">
+<img src="LifeVsHE5PaesiC.png" width="30%">
+</p>
+<p>
+Poiché i dati abbracciano solo alcuni decenni, nessun Paese ha una curva che si sviluppa in modo completo simile a quelle teoriche che abbiamo analizzato sopra. Alcuni Paesi hanno solo la parte con la salita ripida: sono quelli che si sono sviluppati negli ultimi 50 anni, e quindi hanno incrementato la spesa sanitaria a partire da valori molto bassi, come l'India, la Cina, la Turchia. Paesi che invece avevano già una spesa sanitaria consistente ma l'hanno incrementata hanno una curva che corrisponde solo alla parte di salita più lenta e successivo appiattimento, come Australia, Germania, Irlanda, Svizzera, Regno Unito e Stati Uniti. Altri Paesi infine come Giappone, Italia, Corea del Sud si pongono in un tratto intermedio.
+Osserviamo poi che anche se le curve hanno complessivamente la stessa forma non sono identiche: per esempio Australia, Germania, Irlanda, Norvegia e Svizzera hanno curve analoghe, ma più o meno alte. La differenza può essere dovuta ad altri fattori oltre alla spesa (come aspetti genetici o di alimentazione) oppure può essere legata all'efficienza della spesa sanitaria: alcuni paesi a parità di spesa ottengono risultati migliori di altri. Più probabilmente si tratta di un concorso di tutti questi fattori.
+</p>
+<p>	
+Analizziamo infine le curve più diverse dall'andamento complessivo: quelle di USA e Sud Africa. 
+</p>
+<p>	
+La curva degli USA è simile alle altre ma il tratto orizzontale è decisamente più lungo e più basso degli altri Paesi. Gli Stati Uniti sono il Paese che spende di più per la sanità (quasi il doppio di altri Paesi con simile livello di sviluppo) ma l'aspettativa di vita è di circa cinque anni inferiore a quella di Paesi analoghi. Anche in questo caso, se la differenza sia dovuta principalmente all'inefficienza della spesa o ad altri fattori non è possibile dirlo solo sulla base di questi dati.
+</p>
+<p>
+La forma della curva del Sudafrica invece è diversa da tutte le altre: all'aumentare della spesa l'aspettativa di vita prima diminuisce poi risale. Molto probabilmente questo andamento è dovuto alla epidemia di AIDS che ha colpito questo paese in modo particolare tra il 1990 e il 2005. Il virus si diffuse molto rapidamente in particolare tra i giovani adulti, una fascia che normalmente ha un basso tasso di mortalità, e le terapia antiretrovirali inizialmente erano molto costose e accessibili solo a una piccola parte della popolazione.	
 	
-</ul>
-<p>Ci sono due curve che si discostano decisamente dall'andamento complessivo.</p>
-<ul>
-	<li>Identifica i Paesi a cui queste curve sono relativi e cerca di interpretarne la forma particolare </li>
-</ul>
-
-
-<table align="center">
-		<tr>
-			<td class="td"><img src="..\Logo.jpg" width="100" ></td>
-			<td class="td"> <a href="Post03B-Vita.html" > <h3 class="sottotitolo">Per un anno in più <br /> La nostra analisi</h3> </a>
-			</td>
-		</tr>
-</table>
+	
+	
