@@ -15,9 +15,9 @@ import numpy as np
 
 #leggere da FILE
 
-LifeHealthExp = pd.read_csv('LifeVsHealthExpenditureData.csv')
+DatiUnAnno = pd.read_csv('data_census_1861_adjusted_age.csv')
 
-Countries=np.unique(LifeHealthExp.Entity.astype(str))
+AgeClasses=np.unique(DatiUnAnno.age_class.astype(str))
 i=0
 for country in Countries:
     i+=1
